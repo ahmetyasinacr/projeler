@@ -1,0 +1,99 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="kırtasiye.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <title>Document</title>
+    <style>
+        #demo {
+    text-align: center;
+    background-color: grey;
+    border: grey;
+}
+#main_content {
+    top: 160px;
+    left: 160px;
+    width: 800px;
+    min-height: 500px;
+    height: auto;
+    position: relative
+  }
+  
+  #container {
+    width: auto;
+    height: auto;
+    margin: 0 auto;
+    padding: 10px;
+    position: relative;
+  }
+  #main_ahmet {
+    margin-top: 1px;
+     left: 500px;
+     width: 800px;
+     min-height: 500px;
+     height: auto;
+     position: relative
+
+  }
+  #container2 {
+    width: 500;
+    height: auto;
+    margin: 0 auto;
+    padding: 10px;
+    position: relative;
+  }
+    </style>
+</head>
+<body>
+       <h2 id="demo">Cost Calculator</h2>
+       <div class="container">
+        <div class="row">
+          <div class="col-3">
+            <form>
+              <label>Material</label><br>
+              <select onChange="copyTextValue(this);"className="form-control"><br>
+                 <option option value="" disabled selected>Select a material</option>
+                 <option value="100" >Gold</option>
+                 <option value="70">İron</option>
+                 <option value="50">Copper</option>
+             </select> <br>
+             <label>Unit Price</label><br>
+             <input type="text" id="material_value"><br>
+             <label>How Many?</label>
+             <br>
+             <input type="text" id="count"><br><br>
+             <button type="button" class="btn btn-success" onclick="multiply();">Calculate</button><br><br>
+             <button type="reset" class="btn btn-danger"  >Clear</button> 
+           </form>
+          </div>
+          <div class="col-7">
+            <br><br><br><br>
+           <label><p style="color: red;">Total Price</p></label><br>
+           <input type="text" id="sonuc">
+          </div>
+           <script>
+            function copyTextValue(selectedOption) {
+            if(selectedOption.selectedIndex <= 0){
+            document.getElementById("material_value").value = '';
+            return;
+            }
+            
+             var selectedOptionValue = selectedOption.value;
+             document.getElementById("material_value").value = selectedOptionValue;
+
+           
+            }
+            function multiply() {	
+                var firstInput=document.getElementById("material_value");
+              var secondInput=document.getElementById("count");
+              document.getElementById("sonuc").value=sonuc=parseInt(firstInput.value)*parseInt(secondInput.value);
+            }
+        
+            </script>
+           
+          <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>   
+</html>
