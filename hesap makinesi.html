@@ -1,0 +1,61 @@
+<html>
+
+<head>
+
+
+
+<title></title>
+</head>
+
+
+<body>
+
+
+<h1>ALFANOVA</h1>
+<br/>
+<input type="number" id="first">
+<br/>
+<br/>
+<input type="number" id="second">
+<button onclick="sum();"> + SUM</button>
+
+<button onclick="minus();"> - MINUS</button>
+
+<button onclick="multiply();"> * MULTİPLY</button>
+
+<button onclick="plenty();">/ plenty</button>
+</body>
+
+<script>
+alert("ahmet acar yaptı");
+
+ function sum() {	
+	var firstInput=document.getElementById("first");
+	var secondInput=document.getElementById("second");
+ 	var sonuc=parseInt(firstInput.value)+parseInt(secondInput.value);
+	 alert(sonuc);
+ }
+ function minus() {	
+	var firstInput=document.getElementById("first");
+	var secondInput=document.getElementById("second");
+ 	var sonuc=parseInt(firstInput.value)-parseInt(secondInput.value);
+	 alert(sonuc);
+ } 
+    function multiply() {	
+	var firstInput=document.getElementById("first");
+	var secondInput=document.getElementById("second");
+ 	var sonuc=parseInt(firstInput.value)*parseInt(secondInput.value);
+	 alert(sonuc);
+ }
+ function plenty() {	
+	var firstInput=document.getElementById("first");
+	var secondInput=document.getElementById("second");
+ 	var sonuc=parseInt(firstInput.value)/parseInt(secondInput.value);
+	 alert(sonuc);
+ }
+
+
+</script>
+
+
+</html>
